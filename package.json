@@ -1,0 +1,19 @@
+{
+  "name": "alexander-hardeland-js2-ma2",
+  "version": "1.0.0",
+  "description": "JavaScript2 module assignment 2 delivery. Noroff School - front-end development",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PythonMasterAlexander/alexander-hardeland-js2-ma1.git"
+  },
+  "author": "Alexander Hardeland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PythonMasterAlexander/alexander-hardeland-js2-ma1/issues"
+  },
+  "homepage": "https://github.com/PythonMasterAlexander/alexander-hardeland-js2-ma1#readme"
+}
