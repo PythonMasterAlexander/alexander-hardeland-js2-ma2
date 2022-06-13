@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,IAAI,EAAE,IAAI,CAAC;EACT,MAAM,EAAE,IAAI;CACb;;AAED,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,4BAA4B;CAC1C;;AAED,AAAA,CAAC,EAAE,CAAC,AAAA,OAAO,EAAE,CAAC,AAAA,MAAM,CAAC;EACnB,UAAU,EAAE,OAAO;CACpB;;AAED,AAAA,EAAE,EAAE,EAAE,EAAE,EAAE,CAAC;EACT,WAAW,EAAE,wBAAwB;CACtC",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/partials/_variables.scss",
+        "../scss/partials/_main.scss",
+        "../scss/partials/_books-section.scss",
+        "../scss/partials/_wish-list-section.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
