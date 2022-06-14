@@ -23,14 +23,18 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Inconsolata', monospace;
   color: red;
+  font-family: 'Inconsolata', monospace;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 .page-wrapper {
   flex: 1 0 auto;
 }
 
-footer {
-  flex-shrink: 0;
+.main {
+  display: flex;
 }
