@@ -20,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 1.3rem;
 
   h1, h2, h3 {
     color: $color-blue;
@@ -30,6 +31,7 @@ body {
 
 header {
   h1 {
+    font-size: 3.3rem;
     margin: $margin-size 0;
   }
 }
@@ -39,7 +41,16 @@ main {
   justify-content: space-between;
   width: 70%;
   margin: $margin-extra-size auto;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
 }
+
 .page-wrapper {
   flex: 1 0 auto;
 }

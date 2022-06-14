@@ -1,0 +1,22 @@
+.wish-list-section__input-section {
+  margin: $margin-size 0;
+
+  label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  input {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 40px;
+  }
+
+  button {
+    background: $color-button-background;
+    border-radius: 2px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
