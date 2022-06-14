@@ -7,6 +7,17 @@ html, body {
   height: 100%;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,12 +29,39 @@ body {
   font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+body h1, body h2, body h3 {
+  color: #1e00ff;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
 }
 
-h1, h2, h3 {
-  font-family: 'Inconsolata', monospace;
+header h1 {
+  margin: 20px 0;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.page-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.footer__author-section {
+  margin: 20px 0;
 }
 /*# sourceMappingURL=style.css.map */
