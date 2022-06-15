@@ -1,4 +1,5 @@
 import { buttonElement, inputElement, listContainer } from "./constants/constants.js";
+import { toggleClickClassOnOff } from "./components/toggleClickClassOnOff.js";
 
 /* -This variable must be declared here and not be a import from another file. 
 Doing so will turn the variable into 'read-only' and will throw an error */
@@ -10,7 +11,9 @@ const addItemsToList = function() {
 
   if(itemsToAddToList.length >= 3) {
     todoListArr.push(itemsToAddToList);
+
     generateHtmlForList();
+
     inputElement.value = "";
     inputElement.focus();
   }
@@ -42,10 +45,6 @@ const generateHtmlForList = function() {
   });
 };
 
-const toggleClickClassOnOff = function() {
-  event.target.classList.toggle('clickClass');
-};
-
 const removeItemFromList = function() {
   let deleteItemFromList = event.target.dataset.item;
 
@@ -61,3 +60,10 @@ const removeItemFromList = function() {
 
 //TODO Save the list and retrieve it from local storage
 buttonElement.addEventListener('click', addItemsToList);
+
+
+
+
+//TODO Loop through the array and create one html list from each item in the array
+//TODO Ad a button or icon that removes the list item when you click it
+//TODO When there is no more items display a message 
