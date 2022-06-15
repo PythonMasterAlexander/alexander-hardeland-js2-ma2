@@ -4,6 +4,7 @@ export const createList = function(inputInHtml) {
   html = `
     <li>
       <span>${inputInHtml}</span>
+      <i class="fa-solid fa-trash" data-item="${inputInHtml}"></i>
     </li>
   `;
 

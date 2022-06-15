@@ -1,17 +1,41 @@
-import { inputElement, buttonElement } from './constants/constants.js';
-import { createList } from './components/createList.js';
-import { todoListArr } from './constants/todoListArr.js';
+import { buttonElement, inputElement, listContainer } from "./constants/constants.js";
+import { todoListArr } from "./constants/todoListArr.js";
 
-const clickButtonToAddList = function() {
-  const valueOfInputElement = inputElement.value.trim();
+const addItemsToList = function() {
+  let itemsToAddToList = inputElement.value.trim();
 
-  if(valueOfInputElement.length >= 3) {
-    todoListArr.push(valueOfInputElement);
-    console.log(todoListArr);
+  if(itemsToAddToList.length >= 3) {
+    todoListArr.push(itemsToAddToList);
+    generateHtmlForList();
+    inputElement.value = "";
+    inputElement.focus();
   }
-
-  inputElement.value = "";
-  inputElement.focus();
 };
 
-buttonElement.addEventListener('click', clickButtonToAddList);
+const generateHtmlForList = function() {
+  listContainer.innerHTML = "";
+
+  todoListArr.forEach(function(listItem) {
+    let html = "";
+
+    html = `
+      <li>
+        <span class="list-item">${listItem}</span>
+        <i class="fa fa-trash" data-item="${listItem}"></i>
+      </li>  
+    `;
+    listContainer.innerHTML += html;
+  });
+
+  const listItems = document.querySelectorAll('.list-item');
+
+  listItems.forEach(function(item) {
+    item.addEventListener('click', toggleClickClassOnOff);
+  });
+};
+
+const toggleClickClassOnOff = function() {
+  event.target.classList.toggle('clickClass');
+};
+
+buttonElement.addEventListener('click', addItemsToList);

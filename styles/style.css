@@ -75,31 +75,45 @@ main h3 {
   margin: 20px 0;
 }
 
+.clickClass {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #ff6666;
+          text-decoration-color: #ff6666;
+}
+
 .main__books-section p {
   margin: 20px 0;
 }
 
-.wish-list-section__input-section {
+.wish-list-section {
   margin: 20px 0;
 }
 
-.wish-list-section__input-section label {
+.wish-list-section label {
   display: block;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.wish-list-section__input-section input {
+.wish-list-section input {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 40px;
+  height: 30px;
 }
 
-.wish-list-section__input-section button {
+.wish-list-section button {
   background: #ff6666;
   border-radius: 2px;
   font-family: 'Kdam Thmor Pro', sans-serif;
   font-size: 0.8rem;
-  padding: 10px;
+  padding: 6px;
+}
+
+.wish-list-section__list-container {
+  margin: 20px 0;
+}
+
+.wish-list-section span {
+  padding-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */
