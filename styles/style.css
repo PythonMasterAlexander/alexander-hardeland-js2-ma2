@@ -36,6 +36,10 @@ body h1, body h2, body h3 {
   text-align: center;
 }
 
+body li, body span {
+  cursor: pointer;
+}
+
 header h1 {
   font-size: 3.3rem;
   margin: 20px 0;
@@ -58,6 +62,10 @@ main h2 {
 
 main h3 {
   font-size: 2rem;
+}
+
+main li {
+  margin: 50px 0;
 }
 
 .page-wrapper {
@@ -83,6 +91,16 @@ main h3 {
 
 .main__books-section p {
   margin: 20px 0;
+}
+
+.main__books-section .book-list__button {
+  background: #ff6666;
+  border-radius: 2px;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 0.8rem;
+  float: right;
+  padding: 6px;
+  margin-left: 20px;
 }
 
 .wish-list-section {

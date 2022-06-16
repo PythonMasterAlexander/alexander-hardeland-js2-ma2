@@ -1,5 +1,5 @@
 import { buttonElement, inputElement, listContainer, bookListContainer } from "./constants/constants.js";
-import { createHtml } from "./components/createHtml.js";
+import { createListForTodoList } from "./components/createListForTodoList.js";
 import { toggleClickClassOnOff } from "./components/toggleClickClassOnOff.js";
 
 /* -This variable must be declared here and not be a import from another file. 
@@ -24,7 +24,7 @@ const generateHtmlForList = function() {
   listContainer.innerHTML = "";
 
   for(let i = 0; i < todoListArr.length; i++) {
-    listContainer.innerHTML += createHtml(todoListArr[i]);
+    listContainer.innerHTML += createListForTodoList(todoListArr[i]);
   }
 
   const listItems = document.querySelectorAll('.list-item');
@@ -74,10 +74,30 @@ let books = [
   },
 ];
 
-for(let i = 0; i < books.length; i++) {
-  const bookReviewDate = books[i].isbn; 
-  const bookReview = books[i].title;
-}
-
 //TODO Ad a button or icon that removes the list item when you click it
 //TODO When there is no more items display a message 
+
+const removeBookListItem = function() {
+  const bookRelease = event.target.dataset.item;
+
+  console.log(bookRelease);
+};
+
+for(let i = 0; i < books.length; i++) {
+  const bookReviewId = books[i].isbn; 
+  const bookReview = books[i].title;
+
+  let html = "";
+  html = `
+    <li>
+      <span>Review: ${bookReview}</span>
+      <button class="book-list__button" data-item="${bookReviewId}">Remove</button>
+    </li  
+  `;
+  bookListContainer.innerHTML += html;
+
+  const buttonsInList = document.querySelectorAll('.book-list__button');
+  buttonsInList.forEach(function(button) {
+    button.addEventListener('click', removeBookListItem);
+  });
+}

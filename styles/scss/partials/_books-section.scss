@@ -2,4 +2,14 @@
   p {
     margin: $margin-size 0;
   }
+
+  .book-list__button {
+    background: $color-button-background;
+    border-radius: 2px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 0.8rem;
+    float: right;
+    padding: 6px;
+    margin-left: $margin-size;
+  }
 }
