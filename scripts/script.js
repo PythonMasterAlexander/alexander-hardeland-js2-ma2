@@ -1,4 +1,5 @@
-import { buttonElement, inputElement, listContainer } from "./constants/constants.js";
+import { buttonElement, inputElement, listContainer, bookListContainer } from "./constants/constants.js";
+import { createHtml } from "./components/createHtml.js";
 import { toggleClickClassOnOff } from "./components/toggleClickClassOnOff.js";
 
 /* -This variable must be declared here and not be a import from another file. 
@@ -22,17 +23,9 @@ const addItemsToList = function() {
 const generateHtmlForList = function() {
   listContainer.innerHTML = "";
 
-  todoListArr.forEach(function(listItem) {
-    let html = "";
-
-    html = `
-      <li>
-        <span class="list-item">${listItem}</span>
-        <i class="fa fa-trash" data-item="${listItem}"></i>
-      </li>  
-    `;
-    listContainer.innerHTML += html;
-  });
+  for(let i = 0; i < todoListArr.length; i++) {
+    listContainer.innerHTML += createHtml(todoListArr[i]);
+  }
 
   const listItems = document.querySelectorAll('.list-item');
   listItems.forEach(function(listItem) {
@@ -61,9 +54,30 @@ const removeItemFromList = function() {
 //TODO Save the list and retrieve it from local storage
 buttonElement.addEventListener('click', addItemsToList);
 
-
-
-
 //TODO Loop through the array and create one html list from each item in the array
+let books = [
+  {
+    isbn: "1600506460320",
+    title: "Great book"
+  },
+  {
+    isbn: "1600506460373",
+    title: "Ok book"
+  },
+  {
+    isbn: "1600506460521",
+    title: "Bad book"
+  },
+  {
+    isbn: "1600506460456",
+    title: "Terrible book"
+  },
+];
+
+for(let i = 0; i < books.length; i++) {
+  const bookReviewDate = books[i].isbn; 
+  const bookReview = books[i].title;
+}
+
 //TODO Ad a button or icon that removes the list item when you click it
 //TODO When there is no more items display a message 
